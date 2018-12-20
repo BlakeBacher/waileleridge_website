@@ -10,12 +10,11 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button{
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -50,30 +49,20 @@ table {
 
 :root{
   /* COLORS */
-  --maincolor: rgb(0, 0, 0);
-  --accentcolor:#061C4B;
-  --color_3:#5FD4D1;
+  --maincolor: rgba(0, 0, 0, 0.856);
+  --accentcolor:rgb(41, 41, 41);
+  --color_3:#01B7F4;
 
   /* FONT */
   --mainfont: 'Montserrat', sans-serif;
+  --mainfontsize: 14px;
 }
 
 
 .App {
   font-family: var(--mainfont);
+  font-size: var(--mainfontsize)
 }
 
-button{
-	height: 30px;
-	width: 70px;
-	outline: none;
-	border: none;
-	margin: 5px;
-}
-button:hover{
-	background: lightgray;
-}
-button:active{
-	background: darkgray;
-}
+
 

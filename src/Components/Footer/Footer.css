@@ -1,5 +1,4 @@
 .Footer{
-    position: absolute;
     bottom: 0px;
     background: var(--accentcolor);
     height: 500px;
@@ -9,10 +8,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 14px;
 }
 #social_icons{
-    padding: 20px 20px 20px 0px;
+    padding: 10px 0px 10px 0px;
 }
 .social_icon{
     height: 30px;
@@ -24,4 +22,27 @@
 }
 #footer_logo{
     height: 100px;
+    padding-bottom: 10px;
+}
+.copyrightinfo{
+    padding: 0px 11px 5px 11px;
+    padding-left: 11px;
+    color: white;
+    text-decoration: none;
+}
+.footer_links{
+    height: 200px;
+    width: 150px;
+}
+.footer_title{
+    color: var(--color_3);
+    padding: 15px 0px 15px 0px;
+}
+.footer_subtitle{
+    padding: 4px 0px 4px 0px;
+    opacity: .6;
+}
+.footer_subtitle:hover{
+    opacity: 1;
+    cursor: pointer;
 }
