@@ -63,6 +63,10 @@ table {
   font-family: var(--mainfont);
   font-size: var(--mainfontsize)
 }
+h1{
+	color: white;
+	font-size: 60px;
+}
 
 
 

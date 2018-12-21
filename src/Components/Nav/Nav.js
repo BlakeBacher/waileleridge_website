@@ -16,7 +16,7 @@ export default class Nav extends Component {
     }
 
     scrollFunction(){
-        if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+        if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
             this.setState({active: true})
         } else {
             this.setState({active:false})

@@ -3,17 +3,22 @@ import React, { Component } from 'react';
 
 import Nav from './../Nav/Nav'
 import Footer from './../Footer/Footer'
+import './Home.css'
 
-import main_background from './../Images/main_background.jpg'
 
 export default class Home  extends Component {
     render() {
         return (
             <div>
                 <Nav/>
-                <div>
-                    <img alt='' src={main_background} style={{width:'100%'}}/>
-                </div> 
+                <body>
+                    <div id='home_maintitle'>
+                        <h1>Excellence in every complex.</h1>
+                    </div> 
+                    <div id='background1'></div> 
+                    <div style={{height:'60vh'}}></div>
+                    <div id='background2'></div>  
+                </body>
                 <Footer/>
             </div>
         )
