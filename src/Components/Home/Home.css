@@ -1,23 +1,73 @@
-#home_maintitle{
-  position: fixed;
-  top: 200px;
+#maintitle{
+  position: absolute;
+  top: 30%;
   left: 0;
   right: 0;
   margin: auto;
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
+.highlight{
+  color: var(--maincolor)
+}
+#subtitle{
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 60vw;
+  text-align: center;
+}
+#arrow_box{
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  top: 86vh;
+  background: var(--maincolor);
+  margin: auto;
+  left: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--color_3);
+  text-align: center;
+}
+.downarrow{
+  height: 35px;
+  margin-top: 20px;
+}
+.passing {
+  animation: passing_4284 2s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes passing_4284 {
+  0% { transform:translateY(-50%); opacity:0 }
+  40% { transform:translateY(0%); opacity:1 }
+  80% { transform:translateY(50%); opacity:0 }
+  100% { transform:translateY(50%); opacity:0 }
+}
 #background1{
-  background-image: url('./../Images/background1.jpg');
-  min-height: 100vh; 
+  background-image: url('./../Images/background7.jpg');
+  min-height: 90vh; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #background2{
-    background-image: url('./../Images/background2.jpg');
-    min-height: 700px; 
+    background-image: url('./../Images/background5.jpg');
+    min-height: 70vh; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #background3{
+    background-image: url('./../Images/background8.jpg');
+    min-height: 70vh; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
