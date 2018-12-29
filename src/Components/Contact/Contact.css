@@ -1,0 +1,38 @@
+.contact_info{
+    position: fixed;
+    height: 70vh;
+    width: 50vw;
+    background: white;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: -400px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 120px 50%;
+    grid-column-gap: 30px;
+    align-items: center;
+    justify-items: end;
+}
+.contact_input{
+    width: 100%;
+}
+.contact_label{
+    float: right;
+}
+#x{
+    background-image: url('./../Images/x_icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    outline: none;
+    border-radius: 50%;
+}
+#x:active{
+    transform: scale(.9)
+}

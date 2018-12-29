@@ -80,3 +80,13 @@
 #contact_navbutton_active:hover{
     background:rgb(0, 172, 230);
 }
+.contact_popup{
+    z-index: 1001;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.651);
+    position: fixed;
+}
+.hidden{
+    display: none;
+}

@@ -12,7 +12,7 @@ export default class Home  extends Component {
 
     handlescroll(){
         window.scrollTo({
-            top: 620,
+            top: 630,
             behavior: 'smooth'
           });
     }

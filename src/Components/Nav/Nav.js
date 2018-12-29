@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
 import './Nav.css'
+import Contact from './../Contact/Contact'
 
 import Wailele_Logo_White from './../Images/Wailele_Logo_White.png'
 import Wailele_Logo_White_Small from './../Images/Wailele_Logo_White_Small.png'
@@ -12,7 +13,9 @@ export default class Nav extends Component {
 
         this.state={
             active: false,
+            contact: true,
         }
+        this.deactivatecontact = this.deactivatecontact.bind(this)
     }
 
     scrollFunction(){
@@ -21,6 +24,12 @@ export default class Nav extends Component {
         } else {
             this.setState({active:false})
         }
+    }
+    activeatecontact(){
+        this.setState({contact: true})
+    }
+    deactivatecontact(){
+        this.setState({contact:false})
     }
 
     render() {
@@ -34,7 +43,7 @@ export default class Nav extends Component {
                             <Link to='/map'><button className='navbutton_active'>Map</button></Link>
                             <Link to='/about'><button className='navbutton_active'>About</button></Link>
                             <Link to='/gallery'><button className='navbutton_active'>Gallery</button></Link>
-                            <Link to='/contact'><button id='contact_navbutton_active'>Contact</button></Link>
+                            <button id='contact_navbutton_active' onClick={() => {this.activeatecontact()}}>Contact</button>
                         </div> 
                     </div>
                 :
@@ -45,10 +54,14 @@ export default class Nav extends Component {
                             <Link to='/map'><button className='navbutton'>Map</button></Link>
                             <Link to='/about'><button className='navbutton'>About</button></Link>
                             <Link to='/gallery'><button className='navbutton'>Gallery</button></Link>
-                            <Link to='/contact'><button className='navbutton'>Contact</button></Link>
+                            <button className='navbutton' onClick={() => {this.activeatecontact()}}>Contact</button>
                         </div> 
                     </div> 
                 }
+                <div className={this.state.contact ? 'contact_popup' : 'hidden'}>
+                    <Contact contact = {this.state.contact}
+                             deactivatecontact = {this.deactivatecontact}/>
+                </div>
                 {window.onscroll = () => {this.scrollFunction()}}
             </div>
         )
