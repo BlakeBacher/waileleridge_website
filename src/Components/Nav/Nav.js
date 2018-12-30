@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
 import './Nav.css'
+import './../../animate.css'
 import Contact from './../Contact/Contact'
 
 import Wailele_Logo_White from './../Images/Wailele_Logo_White.png'
@@ -58,10 +59,10 @@ export default class Nav extends Component {
                         </div> 
                     </div> 
                 }
-                <div className={this.state.contact ? 'contact_popup' : 'hidden'}>
+                
                     <Contact contact = {this.state.contact}
                              deactivatecontact = {this.deactivatecontact}/>
-                </div>
+                             
                 {window.onscroll = () => {this.scrollFunction()}}
             </div>
         )
