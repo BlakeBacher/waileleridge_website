@@ -14,7 +14,7 @@ export default class Nav extends Component {
 
         this.state={
             active: false,
-            contact: true,
+            contact: false,
         }
         this.deactivatecontact = this.deactivatecontact.bind(this)
     }
@@ -62,7 +62,7 @@ export default class Nav extends Component {
                 
                     <Contact contact = {this.state.contact}
                              deactivatecontact = {this.deactivatecontact}/>
-                             
+
                 {window.onscroll = () => {this.scrollFunction()}}
             </div>
         )

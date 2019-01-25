@@ -13,7 +13,7 @@
 .contact_popup_box{
     background: white;
     position: fixed;
-    height: 75vh;
+    height: 85vh;
     width: 50vw;
     left: 50%;
     top: 50%;
@@ -48,6 +48,7 @@
     grid-row-gap: 10px;
     align-items: center;
     justify-items: end;
+    max-height: 60vh;
 }
 .contact_input{
     width: 100%;

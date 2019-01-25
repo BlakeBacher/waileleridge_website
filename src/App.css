@@ -58,7 +58,7 @@ table {
 
   /* FONT */
   --mainfont: 'Montserrat', sans-serif;
-  --mainfontsize: 14px;
+  --mainfontsize: 20px;
   --mainfontcolor: white;
 }
 
@@ -70,6 +70,10 @@ table {
 h1{
 	color: var(--mainfontcolor);
 	font-size: 90px;
+}
+h2{
+	color: var(--mainfontcolor);
+	font-size: 70px;
 }
 h6{
 	color: var(--mainfontcolor);
@@ -94,10 +98,14 @@ input:focus{
 	max-height: 100vh;
 	min-height: 100%;
 }
-.highlight{
+.highlightblack{
 	color: var(--maincolor);
 	font-style: italic;
   }
+.highlightblue{
+color: var(--color_3);
+font-style: italic;
+}
 
 
 

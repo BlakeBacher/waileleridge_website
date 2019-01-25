@@ -12,9 +12,28 @@ export default class Map extends Component {
             <div>
                 <Nav/>
                 <body>
-                    <div  className='reset'> Map</div>
+                    <div className='map'></div>
+                    <div className='map_key'>
+                        <p>Click on the building you are interested in and a list of available units in the selected building will be displayed.</p>
+                        <div>
+                            <p className='key_color color1'>Available</p>
+                        </div>
+                        <div>
+                            <p className='key_color color2'>Sold Out</p>
+                        </div>
+                        <div>
+                            <p className='key_color color3'>Under Contruction</p>
+                        </div>
+                        <div>
+                            <p className='key_color color4'>Unavailable</p>
+                        </div> 
+                        <div>
+                            <p className='key_color color5'>Model Unit</p>
+                        </div> 
+                    </div>
+                    <div className='north'></div> 
+                    <div className='map_instructions'></div> 
                 </body>
-                {/* <area data-mapkey="3" shape="poly" coords="349,217,342,217,324,218,319,217,319,206,349,206" href="/Custom/ViewByBuilding?b=3"></area> */}
                 <Footer/>
             </div>
         )
