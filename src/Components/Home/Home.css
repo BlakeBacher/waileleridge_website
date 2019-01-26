@@ -48,16 +48,29 @@
 }
 .section1{
   height: 80vh;
-  background: var(--accentcolor);
+  background: white;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .section2{
   height: 80vh;
-  background: var(--accentcolor);
+  background: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+.infobox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--accentcolor);
+  text-align: center;
+  width: 25vw;
 }
 #background1{
   background-image: url('./../Images/background11.jpg');
@@ -95,76 +108,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 50px;
     flex-wrap: wrap;
   }
-  .placesbutton{
-    height: 60px;
-    width: 200px;
-    background: none;
-    color: black;
-    font-size: var(--mainfontsize);
-    background: white;
-    margin:15px;
-    outline: none;
-    /* border-radius: 10px; */
-  }
-  .placesbutton:hover{
-   opacity: 1;
-  }
-  .placesbutton:active{
-    transform: scale(.95)
-  }
-  .placesbuttonactive{
-    height: 60px;
-    width: 200px;
-    color: black;
-    font-size: var(--mainfontsize);
-    background: white;
-    margin:15px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--color_3);
-    outline: none;
-    /* border-radius: 10px; */
-  }
-
-
-
-
-
-
-
-  background{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
   
+  .cursor{
+    color: var(--color_3);
+    font-style: normal;
   }
-  
-  .typewriter {
-    text-align: center;
-    overflow: hidden; 
-    border-right: .15em solid black; 
-    color: white;
-    font-family: Courier New;
-    top:30%;
-    font-size: 40px;
-    white-space: nowrap; 
-    letter-spacing: .30em;
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .75s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width:20% }
-    to { width: 50% }
-  }
-  
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-  }
+
+
+
+
+
+
+
+
   
