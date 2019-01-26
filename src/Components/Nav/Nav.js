@@ -13,30 +13,23 @@ export default class Nav extends Component {
         super()
 
         this.state={
-            active: false,
             contact: false,
         }
         this.deactivatecontact = this.deactivatecontact.bind(this)
     }
 
-    scrollFunction(){
-        if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
-            this.setState({active: true})
-        } else {
-            this.setState({active:false})
-        }
-    }
     activeatecontact(){
         this.setState({contact: true})
     }
     deactivatecontact(){
         this.setState({contact:false})
     }
-
+    
     render() {
+        
         return (
             <div>
-                {this.state.active ?
+                {this.props.active ?
                     <div className='nav_active'>
                         <img alt='' src={Wailele_Logo_White_Small} id='nav_logo_active'/>
                         <div className='navbuttons'>
@@ -62,8 +55,6 @@ export default class Nav extends Component {
                 
                     <Contact contact = {this.state.contact}
                              deactivatecontact = {this.deactivatecontact}/>
-
-                {window.onscroll = () => {this.scrollFunction()}}
             </div>
         )
     }

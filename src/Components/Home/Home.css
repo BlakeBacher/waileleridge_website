@@ -49,11 +49,12 @@
 .section1{
   height: 80vh;
   background: white;
-  color: white;
+  color: var(--accentcolor);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
 }
 .section2{
   height: 80vh;
@@ -61,6 +62,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+}
+.infobox_main{
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
 .infobox{
@@ -71,6 +79,9 @@
   color: var(--accentcolor);
   text-align: center;
   width: 25vw;
+}
+.info_icon{
+  height: 80px;
 }
 #background1{
   background-image: url('./../Images/background11.jpg');

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import Typing from 'react-typing-animation';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
 import Nav from './../Nav/Nav'
 import Footer from './../Footer/Footer'
 import './Home.css'
+import './../../vivify.css'
 
 import downarrow_blue from './../Images/downarrow_blue.png'
 import beaches from './../Images/Places/Beaches.jpg'
@@ -15,6 +18,10 @@ import dining from './../Images/Places/Dining.png'
 import golf from './../Images/Places/Golf.png'
 import all from './../Images/Places/All.jpg'
 
+import company_icon from './../Images/Icons/company_icon.png'
+import map_icon from './../Images/Icons/map_icon.png'
+import condo_icon from './../Images/Icons/condo_icon.png'
+
 
 
 export default class Home  extends Component {
@@ -22,21 +29,30 @@ export default class Home  extends Component {
         super()
 
         this.state={
-            places:'beaches'
+            places: 'beaches',
+            active: false,
         }
     }
-
+    scrollFunction(){
+        if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
+            this.setState({active: true})
+        } else {
+            this.setState({active:false})
+        }
+    }
     handlescroll(){
         window.scrollTo({
-            top: 630,
+            top: 700,
             behavior: 'smooth'
-          });
+        });
     }
     changePlace(e){
         this.setState({places: e.target.value})
     }
     
     render() {
+        AOS.init();
+        window.onscroll = () => {this.scrollFunction()}
         const AnimatedTypingComponent = () => (
             <Typing loop cursorClassName='cursor'>
               <span className='highlightblue'>places</span>
@@ -59,35 +75,41 @@ export default class Home  extends Component {
               <Typing.Backspace count={15}/>
             </Typing>
           );
-              return (
-                  <div>
-                <Nav/>
-                <body>
-                    <h1 id='maintitle'>Immerse yourself in <span className='highlightblack'>paradise</span></h1>
+          return (
+              <div>
+                <Nav active = {this.state.active}/>
+                <div>
+                    <h1 id='maintitle'>Immerse yourself in <span className='highlightblack'>paradise.</span></h1>
                     <h6 id='subtitle'>Located in West Maui, just minutes from dining and shopping in historic Lahaina town and Ka'anapali, you’ll find a very special Maui real estate community named Wailele Ridge.</h6>
                     <div id='arrow_box' onClick={() => {this.handlescroll()}}>
                         <img alt='' src={downarrow_blue} className='downarrow passing'/>
                     </div> 
                     <div id='background1'></div> 
                     <div className='section1'>
-                        <div className='infobox'>
-                            <img alt=''/>
-                            <h4>150+ Condominiums Underconstruction</h4>
-                            <p></p>
-                            <button className='primarybutton'>Available</button>
-                        </div>
-                        <div className='infobox'>
-                            <img alt=''/>
-                            <h4>20+ Buildings Available</h4>
-                            <p></p>
-                            <button className='primarybutton'>Site Map</button>
+                        <div>
+                            <h5 style={{margin:'20px'}}>Our Mission</h5>
+                            <p style={{padding:'0px 15vw 0px 15vw'}}>Our mission is to provide residents a desirable quality of life in a safe apartment community, to provide employees with opportunities for personal and professional development, and to provide property owners with profitable real estate assets.</p>
                         </div> 
-                            <div className='infobox'>
-                            <img alt=''/>
-                            <h4>Over 40 Years of Excellence</h4>
-                            <p>Founded by President and CEO, Dale L. Rindlisbacher in 1976. Forty years later, what began as a family business with just two employees, has grown to become a highly reputable property management and development company.</p>
-                            <button className='primarybutton'>Bach Corperation</button>
-                        </div>  
+                        <div className='infobox_main'>
+                            <div className='infobox'data-aos="fade-down-right"data-aos-delay="1000">
+                                <img alt='' src={condo_icon} className='info_icon'/>
+                                <h4><span className='highlightblue_small'>150+ </span>Condominiums</h4>
+                                <p style={{padding:'0px 50px 0px 50px'}}>With over 150 condos planned for construction. We have a wide variety to choose from. Anything from a 1 Bedroom & 1 Bathroom condo to a <span className='bold'>5 Bedrooms & 3 Bathrooms</span> with a 2 car garage. With our wide variety of condos to choose. We guarantee that we have a condo for you.</p>
+                                <button className='primarybutton' style={{marginTop:'30px'}}>Available</button>
+                            </div>
+                            <div className='infobox'data-aos="fade-down"data-aos-delay="1000">
+                                <img alt='' src={map_icon} className='info_icon'/>
+                                <h4><span className='highlightblue_small'>20+ </span>Buildings Available</h4>
+                                <p style={{padding:'0px 50px 0px 50px'}}>More than 20 buildings spead out accross almost <span className='bold'>10 acres</span> of land with only a 5 minute drive to the nearest beach or the nearest golf course.  Wailele Ridge is the best way to enjoy Maui Island. Look at our map for your new paradise condo.</p>
+                                <button className='primarybutton' style={{marginTop:'30px'}}>Site Map</button>
+                            </div> 
+                                <div className='infobox'data-aos="fade-down-left"data-aos-delay="1000">
+                                <img alt='' src={company_icon} className='info_icon'/>
+                                <h4>Over <span className='highlightblue_small'>40 </span>years of Excellence</h4>
+                                <p style={{padding:'0px 50px 0px 50px'}}>Founded by President and CEO, Dale L. Rindlisbacher in 1976. Forty years later, what began as a family business with just two employees, has grown to become a <span className='bold'>highly reputable</span> property management and development company.</p>
+                                <button className='primarybutton' style={{marginTop:'30px'}}>Bach Corperation</button>
+                            </div>  
+                        </div> 
                     </div>
                     <div id='background2'></div>
                     <div className='section2'> 
@@ -124,18 +146,10 @@ export default class Home  extends Component {
                             }   
                     </div>
                     <div id='background3'></div>
-                </body>
+                </div>
                 <Footer/>
             </div>
         )
     }
 }
-
-
-
-
-
-{/* <p>
-Home to clear blue oceans and lush green valleys, West Maui is truly the definition of paradise. Here you’ll find a blend of fascination hawaiian culture, memorable adventures and modern-day conveniences. Experience world-class golf courses, wonderful shopping and unique dining options. For those with a taste for nature and adventure, there are beautiful beaches and breathtaking waterfalls to explore and find. With all there is to do in West Maui, when you come here, you’ll see, hear and feel the spirit of Aloha in every way. From the luxurious Kapalua and Ka’anapali Resorts to historic Lahaina town, paradise and adventure await you at every turn.
-</p> */}
 

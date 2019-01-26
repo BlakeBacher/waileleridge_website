@@ -13,27 +13,27 @@ export default class Contact extends Component {
 
                     <form className='contact_form'>
 
-                        <label for='firstname' className='contact_label'>Firstname</label>
+                        <label htmlFor='firstname' className='contact_label'>Firstname</label>
                         <input type='firstname' className='contact_input'/>
 
-                        <label for='lastname' className='contact_label'>Lastname</label>
+                        <label htmlFor='lastname' className='contact_label'>Lastname</label>
                         <input type='lastname' className='contact_input'/>
 
-                        <label for='email' className='contact_label'>Email</label>
+                        <label htmlFor='email' className='contact_label'>Email</label>
                         <input type='email' className='contact_input'/>
 
-                        <label for='phone' className='contact_label'>Phone</label>
+                        <label htmlFor='phone' className='contact_label'>Phone</label>
                         <input type='phone' className='contact_input'/>
 
-                        <label for='address' className='contact_label'>Address</label>
+                        <label htmlFor='address' className='contact_label'>Address</label>
                         <input type='address' className='contact_input'/>
 
-                        <label for='city' className='contact_label'>City</label>
+                        <label htmlFor='city' className='contact_label'>City</label>
                         <input type='city' className='contact_input'/>
 
-                        <label for='state'>State</label>
+                        <label htmlFor='state'>State</label>
                         <select className='contact_select'>
-                            <option value='' selected></option>
+                            <option value='' defaultValue></option>
                             <option value=''>Alabama</option>
                             <option value=''>Alaska</option> 
                             <option value=''>Arizona</option> 
@@ -86,12 +86,12 @@ export default class Contact extends Component {
                             <option value=''>Wyoming</option>
                         </select>
 
-                        <label for='zipcode' className='contact_label'>Zipcode</label>
+                        <label htmlFor='zipcode' className='contact_label'>Zipcode</label>
                         <input type='zipcode' className='contact_input'/>
 
                         <label>I am:</label>
                         <select className='contact_select'>
-                            <option value='' selected></option>
+                            <option value='' defaultValue></option>
                             <option value=''>a Buyer</option> 
                             <option value=''>a Realtor</option>
                             <option value=''>working with a Realtor</option>
@@ -99,7 +99,7 @@ export default class Contact extends Component {
 
                         <label>I'm interested in:</label>
                         <select className='contact_select'>
-                            <option value='' selected></option>
+                            <option value='' defaultValue></option>
                             <option value=''>1 Bedroom</option> 
                             <option value=''>2 Bedroom</option>
                             <option value=''>3 Bedroom</option>
@@ -107,13 +107,13 @@ export default class Contact extends Component {
 
                         <label>This will be my:</label>
                         <select className='contact_select'>
-                            <option value='' selected></option>
+                            <option value='' defaultValue></option>
                             <option value=''>1st home</option> 
                             <option value=''>2nd home</option>
                             <option value=''>3+ home</option>
                         </select>
 
-                        <label for='additional_comments' className='contact_label'>Comments</label>
+                        <label htmlFor='additional_comments' className='contact_label'>Comments</label>
                         <input type='' className='contact_input'/>
 
                         <label className="switch">
@@ -129,11 +129,11 @@ export default class Contact extends Component {
                             <label>I would like to receive the latest news about Wailele Ridge.</label>
 
                     </form>
-        <div className='contact_leftside'>
-            <div className='contact_logo'></div>
-            <p>Contact Sheet</p>
-            <button className='contact_submit'>Submit</button>
-        </div> 
+                    <div className='contact_leftside'>
+                        <div className='contact_logo'></div>
+                        <p>Contact Sheet</p>
+                        <button className='contact_submit'>Submit</button>
+                    </div> 
                 </div> 
             </div> 
         )
